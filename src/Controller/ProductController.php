@@ -15,11 +15,16 @@ class ProductController extends AbstractController {
 
     /**
      * @Route("/", name="products_index", methods={"GET"})
-     * @Template("base.html.twig")
-     * @return Response
+     * @Template("Product/product_list.html.twig")
+     * @return array
      */
     public function list() {
-        return [''];
+        $products = [
+            1 => 'name1',
+            2 => 'name2',
+            3 => 'name3'
+        ];
+        return ['products' =>$products];
     }
 
     /**
